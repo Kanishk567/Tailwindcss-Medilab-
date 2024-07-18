@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-py-[3rem]">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <title>Medilab</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <!-- navgation -->
+    <header class="sticky -top-11 z-50 w-full bg-white ">
+        <section id="mob" class=" container mx-auto sm:px-12 ">
+            <!-- lg:hidden  -->
+            <nav class="block  lg:hidden ">
+                <div class="flex  space-x-6 py-2    ">
+                    <a href="#" class="ml-3 text-slate-600 "><i class="fa-regular fa-envelope mr-1 text-blue-600"></i>contact@example.com</a>
+                    <div class=" text-slate-600"><i class="fa-solid fa-mobile-screen-button mr-1 text-blue-600"></i>+91912299700</div>
+                    
+                </div>
+                
+                <div id="lowernav" class="flex items-center h-16 justify-between px-3   bg-white  ">
+                    <h1 class="logo font-bold text-3xl  text-sky-900  font-['poppins'] mr-6 "> <a href="index.html">Medilab</a></h1>
+                    <div class="flex space-x-6">
+                        <a href="#appoint" id="appointment" class="bg-sky-600 rounded-xl  text-sm text-white font-medium p-2  hover:bg-sky-700"> Appointment</a>
+                        <a href="#"><button id="hamburger" onclick="handleMenu()">
+                            <i class="fa-solid fa-bars text-gray-700"></i></button>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- NavToggle Section -->
+                <div id="nav-dialog" class=" hidden fixed  bg-white inset-0 p-3">
+                    <nav id="insidemenu" class="flex justify-between">
+                        <h1 class="logo font-bold text-3xl  text-sky-900  font-['poppins'] mr-6 "><a href="index.html">Medilab</a></h1>
+                            <a href="#"><button id="hamburger" onclick="handleMenu()">
+                                <i class="fa-solid fa-xmark text-gray-700"></i></button>
+                            </a>
+                    </nav>
+                    <div id="lowerINav" class="space-y-6 mt-6 px-4 ">
+                        <a href="#home" onclick="handleMenu()"  class="text-gray-600 block   hover:bg-gray-100 hover:rounded-md  hover:text-sky-600 ">Home</a>
+                        <a href="#about" onclick="handleMenu()"  class="text-gray-600 block   hover:bg-gray-100 hover:rounded-md hover:text-sky-600 ">About</a>
+                        <a href="#services" onclick="handleMenu()"  class="text-gray-600  block  hover:bg-gray-100 hover:rounded-md   hover:text-sky-600 ">Services</a>
+                        <a href="#" onclick="handleMenu()"  class="text-gray-600  block  hover:bg-gray-100 hover:rounded-md   hover:text-sky-600 ">Departments</a>
+                        <a href="#" onclick="handleMenu()"  class="text-gray-600  block  hover:bg-gray-100 hover:rounded-md   hover:text-sky-600 ">Doctors</a>
+                        <a href="#" onclick="handleMenu()"  class="text-gray-600  block  hover:bg-gray-100 hover:rounded-md   hover:text-sky-600 ">Contact</a>
+
+                    </div>
+
+                </div>
+            </nav>
+
+        </section>
+        
+        <section id="desktop" class=" hidden container mx-auto px-2 lg:block ">
+
+            <!-- topNavbar -->
+
+            <div class="flex  justify-between ">
+                <div class="flex  space-x-6 py-2 ">
+                
+                    <a href="#" class="ml-8 text-slate-600 "><i class="fa-regular fa-envelope mr-1 text-blue-600"></i>contact@example.com</a>
+                    <div class="text-slate-600"><i class="fa-solid fa-mobile-screen-button mr-1 text-blue-600"></i>+91912299700</div>
+                </div>
+                <div class="flex  py-2  gap-4 pr-7 ">
+                    <a href="#"><i class="fa-brands fa-twitter   text-sky-800  transition duration-500 hover:text-sky-400"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook  text-sky-800  transition duration-500 hover:text-sky-400"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram text-sky-800  transition duration-500 hover:text-sky-400"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin  text-sky-800  transition duration-500 hover:text-sky-400"></i></a>
+                </div>
+            </div>
+    
+            
+            
+            <nav class="flex items-center justify-between  bg-white pl-8 max-h-20">
+                <h1 class="logo font-bold text-3xl text-sky-900 font-['poppins'] mr-48"><a href="index.html">Medilab</a></h1>
+                
+                <a href="#home" class="text-gray-600   hover:underline  hover:text-sky-600 hover:underline-offset-8  active:underline  active:text-sky-600 active:underline-offset-8">Home</a>
+                <a href="#about" class="text-gray-600   hover:underline hover:text-sky-600 hover:underline-offset-8  active:underline  active:text-sky-600 active:underline-offset-8">About</a>
+                <a href="#services" class="text-gray-600   hover:underline  hover:text-sky-600 hover:underline-offset-8  active:underline  active:text-sky-600 active:underline-offset-8">Services</a>
+                <a href="#" class="text-gray-600   hover:underline  hover:text-sky-600 hover:underline-offset-8  active:underline  active:text-sky-600 active:underline-offset-8">Departments</a>
+                <a href="#" class="text-gray-600   hover:underline  hover:text-sky-600 hover:underline-offset-8  active:underline  active:text-sky-600 active:underline-offset-8">Doctors</a>
+                <a href="#" class="text-gray-600   hover:underline  hover:text-sky-600 hover:underline-offset-8  active:underline  active:text-sky-600 active:underline-offset-8">Contact</a>
+                <button id="appointment" class="bg-sky-600 rounded-xl px-3 py-1  my-8 mx-5  text-lg text-white font-medium transition duration-500 hover:bg-sky-700"><a href="#appoint">Make an Appointment</a></button>
+            </nav>
+
+        </section>
+
+    </header>
+<!-- always use container class amd mx-auto class in for this project to center the content of the wepage in the div wrapup ( where the all children are branched) that will help our project to copy 100% to original -->
+    <main class="w-full box-border ">
+        <!-- home -->
+         <section id="home">
+            <div id="bgimage" class=" bg-[url('/img/hero.jpg')] h-screen w-full bg-bottom  bg-cover bg-no-repeat -mt-10 relative lg:bg-fixed">
+                <div id="Welcome Msgbox" class="min-h-64  absolute top-52 container mx-auto px-3   sm:px-24  lg:top-32 2xl:top-96 2xl:px-56 ">
+                    <p class="text-3xl text-sky-900 font-['poppins']  font-semibold lg:text-5xl  "> WELCOME TO MEDILAB</p>
+                    <p class="text-sky-900 font-['poppins'] py-3 text-lg lg:text-2xl "> We are team of talented designers making websites with Tailwindcss </p>
+                    <a href="#"><button  id="get_started" class="bg-sky-600 rounded-full px-11 py-3  my-8   text-sm text-white font-medium transition duration-500 hover:bg-sky-500"> GET STARTED</button></a>     
+                </div>
+            </div>
+
+            <div id="cards" class="grid grid-cols-1  gap-5 mt-16  mb-28 place-items-center container mx-auto sm:px-12 lg:grid-cols-[1fr,2fr] lg:grid-rows-3 lg:relative lg:-top-80 lg:pl-8 lg:pr-4 lg:-mb-52 xl:flex xl:flex-row xl:-top-96">
+
+                <div class="card1 flex flex-col justify-center items-center bg-sky-600 rounded-lg h-[27rem] mx-3  lg:row-span-3 lg:h-[60rem] lg:justify-start lg:pt-8 xl:h-[27rem] xl:max-w-96"> 
+    
+                    <h1 id="heading" class="font-semibold text-3xl text-white  mb-6 font-[Raleway] mx-9 lg:text-4xl " >Why Choose Medilab?</h1>
+    
+                    <p class="text-white px-9 text-lg">Lorem ipsum dolor sit amet, consectetur adipidolore magna aliqua. Duis aute irure dolor in reprehenderit Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
+                    </p>
+                    <button id="get_started" class="bg-sky-400 bg-opacity-50  rounded-full px-7 py-3   mt-12   text-sm  font-semibold group hover:bg-white  "> <a href="#" class="text-white transition duration-500 group-hover:text-sky-400">Learn More ></a></button>
+                </div>
+    
+                <div class="card2 flex flex-col justify-center space-y-8  items-center border-2  shadow-xl rounded-lg bg-white h-72 mx-3 xl:h-80 xl:mx-0 "> 
+                    <div class="icon">
+                        <i class="fa-solid fa-file-invoice-dollar fa-2xl text-sky-600"></i>
+    
+                    </div>
+                    <h1 id="heading" class="font-semibold text-xl font-[Raleway] text-gray-600  ">Corporis voluptates sit</h1>
+                    <p class="text-gray-600 px-10 text-center ">Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                </div>
+                <div class="card3 flex flex-col justify-center space-y-8  items-center border-2  shadow-xl rounded-lg bg-white h-72 mx-3 xl:h-80 xl:mx-0"> 
+                    <div class="icon">
+                        <i class="fa-solid fa-cube fa-2xl text-sky-600"></i></i>
+    
+                    </div>
+                    <h1 id="heading" class="font-semibold text-xl font-[Raleway] text-gray-600 ">Ullamco laboris ladore pan</h1>
+                    <p class="text-gray-600 px-10 text-center ">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt </p>
+                </div>
+                <div class="card4 flex flex-col justify-center space-y-8  items-center border-2  shadow-xl rounded-lg bg-white h-72 mx-3 xl:h-80 xl:mx-0"> 
+                    <div class="icon">
+                       <i class="fa-solid fa-images fa-2xl text-sky-600 "></i>
+    
+                    </div>
+                    <h1 id="heading" class="font-semibold text-xl font-[Raleway] text-gray-600">Labore consequatur</h1>
+                    <p class="text-gray-600 px-10 text-center">Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                </div>
+            </div>
+
+         </section>
+
+         <!-- About -->
+
+         <section id="about">
+
+            <div  class="lg:grid lg:grid-cols-2  lg:mb-10">
+               
+                <div id="backgroundimg" class=" bg-[url('/img/about.jpg')] w-full min-h-[500px] bg-cover bg-center bg-no-repeat"></div>
+                 
+                <div id="gridCol2 ">
+                    <div  id="msg" class="mx-4 mt-12 lg:mx-12 xs:my-20 2xl:mx-16">
+                        <h1 class="text-3xl font-semibold text-sky-900 ">Enim quis est voluptatibus aliquid consequatur fugiat</h1>
+                        <p class="my-6 text-gray-600  ">Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus laudantium. Soluta voluptate sed facere corporis dolores excepturi. Libero laboriosam sint et id nulla tenetur. Suscipit aut voluptate.</p>
+                    </div>
+           
+                <!-- icons-Headings -->
+                    <div id="icon_heads" class="flex flex-col mx-3 mt-10 mb-24 space-y-8  ">
+                        <div id="icon_row1" class="flex  space-x-3  group ">
+                            <div id="icons1" class=" border border-sky-600 rounded-full h-16 w-44 flex  justify-center items-center  m-2 transition duration-500 group-hover:bg-sky-600  sm:max-h-16 sm:max-w-16 ">
+                                <i class="fa-sharp fa-solid fa-fingerprint fa-2xl text-sky-600  group-hover:text-white"> </i>   
+                            </div>
+                            <div class="space-y-2 "><h1 class="text-xl  font-semibold text-gray-800 transition duration-500 hover:text-sky-600  ">Lorem Ipsum</h1>
+                                <p class="text-sm text-gray-700">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                            </div>
+                        </div>
+
+                        <div  id="icon_row2" class="flex  space-x-3  group ">
+                            <div id="icons2" class=" border border-sky-600 rounded-full h-16 w-44 flex  justify-center items-center  m-2 transition duration-500 group-hover:bg-sky-600   sm:max-h-16 sm:max-w-16">
+                                <i class="fa-solid fa-gift fa-2xl  text-sky-600 border transition duration-500 group-hover:text-white"></i>  
+                            </div>
+                            <div class="space-y-2"><h1 class="text-xl  font-semibold text-gray-800 transition duration-500 hover:text-sky-600 ">Nemo Enim</h1>
+                                <p class="text-sm text-gray-700">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                            </div>
+                        </div>
+
+                        <div  id="icon_row3" class="flex  space-x-3  group ">
+                            <div id="icons3" class=" border border-sky-600 rounded-full h-16 w-44 flex  justify-center items-center  m-2 transition duration-500 group-hover:bg-sky-600  sm:max-h-16 sm:max-w-16">
+                                <i class="fa-solid fa-atom fa-2xl text-sky-600 transition duration-500 group-hover:text-white"></i>  
+                            </div>
+                            <div class="space-y-2"><h1 class="text-xl  font-semibold text-gray-800 transition duration-500 hover:text-sky-600 ">Dine Pad</h1>
+                                <p class="text-sm text-gray-700">Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut deserunt minus aut eligendi omnis</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="bgcolour" class="bg-sky-50">
+                <div id="chart" class="flex flex-col space-y-12 bg-sky-50  py-14 px-4 container mx-auto sm:px-16 md:grid md:grid-cols-2 md:gap-x-6 lg:flex lg:flex-row lg:justify-between ">
+                    <div id="docs" class="flex flex-col  items-center bg-white md:mt-[2.90rem]  lg:w-1/4">
+                        <div class="border bg-sky-600 rounded-full h-14 w-14 flex  justify-center items-center relative bottom-5 "><i class="fa-solid fa-user-doctor fa-2xl text-white"></i></div>
+                        <h1 class="text-4xl font-semibold text-sky-950  ">85</h1>
+                        <h1 class="text-gray-600 pb-6  lg:text-xl">Doctors</h1>
+
+                    </div>
+                    <div id="depart" class="flex flex-col  items-center bg-white lg:w-1/4">
+                        <div class="border bg-sky-600 rounded-full h-14 w-14 flex  justify-center items-center relative bottom-7 "><i class="fa-regular fa-hospital fa-2xl text-white"></i></div>
+                        <h1 class="text-4xl font-semibold text-sky-950   ">18</h1>
+                        <h1 class="text-gray-600 pb-6  lg:text-xl">Departments</h1>
+
+                    </div>
+                    <div id="researchl" class="flex flex-col  items-center bg-white lg:w-1/4">
+                        <div class="border bg-sky-600 rounded-full h-14 w-14 flex  justify-center items-center relative bottom-7 "><i class="fa-solid fa-flask fa-2xl text-white"></i></div>
+                        <h1 class="text-4xl font-semibold text-sky-950   ">12</h1>
+                        <h1 class="text-gray-600 pb-6 lg:text-xl">Research Labs</h1>
+
+                    </div>
+                    <div id="awards" class="flex flex-col  items-center bg-white lg:w-1/4">
+                        <div class="border bg-sky-600 rounded-full h-14 w-14 flex  justify-center items-center relative bottom-7 "><i class="fa-solid fa-award fa-2xl text-white"></i></div>
+                        <h1 class="text-4xl font-semibold text-sky-950  ">150</h1>
+                        <h1 class="text-gray-600 pb-6  lg:text-xl">Awards</h1>
+
+                    </div>
+                </div>
+        </div>
+         </section>
+
+
+         <section id="services" class="container mx-auto pb-16 px-1 sm:px-12 ">
+            <div class="text-center px-3 mb-8">
+                <h1 class="font-semibold text-3xl  text-sky-900  font-['poppins'] my-16 underline-mid underline-thin ">Services</h1>
+                <p class="text-gray-600">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+            </div>
+            <div  id="Servicecards" class=" grid grid-cols-1  gap-5  px-3 md:grid-cols-2 lg:grid-cols-3">
+                <div id="Scard1" class="border border-sky-200 text-center flex flex-col justify-center items-center  px-8 h-80 space-y-8 transition duration-500 group hover:bg-sky-600">
+                    <div class="h-16 w-16 bg-sky-600 rounded-lg bg-sky pt-4 shadow-sky transition duration-500 group-hover:bg-white"><i class="fa-solid fa-heart-pulse fa-2xl text-white group-hover:text-sky-600 "></i></div>
+                    <h1 class="text-2xl font-['poppins'] text-sky-900 font-semibold transition duration-500 group-hover:text-white">Lorem Ipsum</h1>
+                    <p class="text-gray-600 transition duration-500 group-hover:text-white">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                </div>
+                <div id="Scard2" class="border border-sky-200 text-center flex flex-col justify-center items-center  px-8 h-80 space-y-8 transition duration-500 group hover:bg-sky-600">
+                    <div class="h-16 w-16 bg-sky-600 rounded-lg bg-sky pt-4 shadow-sky transition duration-500 group-hover:bg-white"><i class="fa-solid fa-capsules fa-2xl  text-white group-hover:text-sky-600"></i></div>
+                    <h1 class="text-2xl font-['poppins'] text-sky-900 font-semibold transition duration-500 group-hover:text-white">Sed ut perspiciatis</h1>
+                    <p class="text-gray-600 transition duration-500 group-hover:text-white">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                </div>
+                <div id="Scard3" class="border border-sky-200 text-center flex flex-col justify-center items-center  px-8 h-80 space-y-8 transition duration-500 group hover:bg-sky-600">
+                    <div class="h-16 w-16 bg-sky-600 rounded-lg bg-sky pt-4 shadow-sky transition duration-500 group-hover:bg-white"><i class="fa-solid fa-hospital-user fa-2xl  text-white group-hover:text-sky-600"></i></div>
+                    <h1 class="text-2xl font-['poppins'] text-sky-900 font-semibold transition duration-500 group-hover:text-white">Magni Dolores</h1>
+                    <p class="text-gray-600 transition duration-500 group-hover:text-white">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+                </div>
+                <div id="Scard4" class="border border-sky-200 text-center flex flex-col justify-center items-center  px-8 h-80 space-y-8 transition duration-500 group hover:bg-sky-600">
+                    <div class="h-16 w-16 bg-sky-600 rounded-lg bg-sky pt-4 shadow-sky transition duration-500 group-hover:bg-white"><i class="fa-solid fa-dna fa-2xl  text-white group-hover:text-sky-600"></i></div>
+                    <h1 class="text-2xl font-['poppins'] text-sky-900 font-semibold transition duration-500 group-hover:text-white">Nemo Enim</h1>
+                    <p class="text-gray-600 transition duration-500 group-hover:text-white">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+                </div>
+                <div id="Scard5" class="border border-sky-200 text-center flex flex-col justify-center items-center  px-8 h-80 space-y-8 transition duration-500 group hover:bg-sky-600">
+                    <div class="h-16 w-16 bg-sky-600 rounded-lg bg-sky pt-4 shadow-sky transition duration-500 group-hover:bg-white"><i class="fa-solid fa-wheelchair fa-2xl  text-white group-hover:text-sky-600 "></i></div>
+                    <h1 class="text-2xl font-['poppins'] text-sky-900 font-semibold transition duration-500 group-hover:text-white">Dele cardo</h1>
+                    <p class="text-gray-600 transition duration-500 group-hover:text-white">Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+                </div>
+                <div id="Scard6" class="border border-sky-200 text-center flex flex-col justify-center items-center  px-8 h-80 space-y-8 transition duration-500 group hover:bg-sky-600">
+                    <div class="h-16 w-16 bg-sky-600 rounded-lg bg-sky pt-4 shadow-sky transition duration-500 group-hover:bg-white"><i class="fa-solid fa-truck-medical fa-2xl  text-white group-hover:text-sky-600 "></i></div>
+                    <h1 class="text-2xl font-['poppins'] text-sky-900 font-semibold transition duration-500 group-hover:text-white">Divera don</h1>
+                    <p class="text-gray-600 transition duration-500 group-hover:text-white">Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+                </div>
+            </div>
+
+         </section>
+
+         <section id="appoint" class="bg-sky-50">
+            <div class="conatiner mx-auto pb-16 px-1 sm:px-12">
+                <div class="text-center px-3 mb-8">
+                    <h1 class="text-3xl text-sky-900 font-semibold font-['poppins'] my-16 underline-mid underline-thin">Make an Appointment</h1>
+                    <p class="text-gray-600">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
+                
+                <form id="form" action="/action_page.php" class="px-3 space-y-6 ">
+                    <div class="flex flex-col gap-6 md:flex-row">
+                        <input type="text" id="fname" name="fname" class="placeholder:text-gray-600 block w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-0 focus:border-sky-600  " placeholder="Your Name">
+                        <input type="text" id="email" name="email" class="placeholder:text-gray-600 block w-full border  border-gray-300 p-2 rounded-md focus:outline-none focus:ring-0 focus:border-sky-600 " placeholder="Your Email">
+                        <input type="text" id="phoneNo" name="phoneNo" class="placeholder:text-gray-600 block w-full border  border-gray-300 p-2 rounded-md focus:outline-none focus:ring-0 focus:border-sky-600 " placeholder="Your PhoneNo.">
+                    </div>
+                    
+                    <div class="flex flex-col gap-6 md:flex-row ">
+                        <input type="text" id="apdate" name="apdate" class="placeholder:text-gray-600 block w-full border  border-gray-300 p-2 rounded-md focus:outline-none focus:ring-0 focus:border-sky-600 " placeholder="Appointment Date">
+                        <select id="department" name="department" class="block w-full border border-gray-300 p-2 rounded-md text-gray-600 focus:outline-none focus:ring-0 focus:border-sky-600 ">
+                            <option value="Select Department">Select Department</option>
+                            <option value="Department1">Department 1</option>
+                            <option value="Department2">Department 2</option>
+                            <option value="Department3">Department 3</option>
+                        </select>
+                        <select id="doctor" name="doctor" class="block w-full border border-gray-300 p-2 rounded-md text-gray-600 focus:outline-none focus:ring-0 focus:border-sky-600 ">
+                            <option value="Select Doctor">Select Doctor</option>
+                            <option value="Doctor1">Doctor 1</option>
+                            <option value="Doctor2">Doctor 2</option>
+                            <option value="Doctor3">Doctor 3</option>
+                        </select>
+                     </div>
+                    <textarea name="message" rows="5" class="w-full placeholder:text-600 border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-0 focus:border-sky-600  " placeholder="Message(Optinal)" ></textarea>    
+                    
+                    <div class="text-center">
+                        <input type="submit" value="Make an Appointment" class="bg-sky-600 rounded-xl   text-white font-medium py-2 px-5 transition duration-500 hover:bg-sky-700">
+                    </div>
+                    
+                </form>    
+            </div>
+         </section>
+
+         <section id="departments" class="container mx-auto px-3 sm:px-12">
+            <div class="text-center px-3 mb-8">
+                <h1 class="font-semibold text-3xl  text-sky-900  font-['poppins'] my-16 underline-mid underline-thin ">Departments</h1>
+                <p class="text-gray-600">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+            </div>
+
+            <div id="imagechange" class="flex flex-col gap-6 lg:flex-row">
+                <ul id="items" class=" lg:order-1 lg:basis-1/4">
+                    <li id="cardio" class="text-sky-900 font-medium font-['poppins'] p-3 cursor-pointer  hover:text-sky-600">Cardiology</li>
+                    <li id="neuro"  class="text-sky-900 font-medium font-['poppins'] p-3 cursor-pointer  hover:text-sky-600">Neurology</li>
+                    <li id="hepato" class="text-sky-900 font-medium font-['poppins'] p-3 cursor-pointer  hover:text-sky-600">hepatology</li>
+                    <li id="pedia"  class="text-sky-900 font-medium font-['poppins'] p-3 cursor-pointer  hover:text-sky-600">Pediatrics</li>
+                    <li id="eye" class="text-sky-900 font-medium font-['poppins'] p-3 cursor-pointer  hover:text-sky-600">Eye Care</li>
+                </ul>
+                <div id="image" class="lg:order-3 lg:basis-1/4">
+                    <img id="img1" src="img/departments-1.jpg" alt="image1" class="block">
+                    <img id="img2" src="img/departments-2.jpg" alt="image2" class="hidden">
+                    <img id="img3" src="img/departments-3.jpg" alt="image3" class="hidden">
+                    <img id="img4" src="img/departments-4.jpg" alt="image4" class="hidden">
+                    <img id="img5" src="img/departments-5.jpg" alt="image5" class="hidden">
+                </div>
+                <div id="descrptionW" class="lg:order-2 lg:basis-1/2">
+                    <div id="cardDis" class="block ">
+                        <h1 class="text-2xl font-semibold font-['poppins'] text-sky-900">Cardiology</h1>
+                        <p class="text-gray-600 italic my-6">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                        <p class="text-gray-600">Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+                    </div>
+                    <div id="neurDis" class="hidden ">
+                        <h1 class="text-2xl font-semibold font-['poppins'] text-sky-900">Neurology</h1>
+                        <p class="text-gray-600 italic my-6">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                        <p class="text-gray-600">Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+                    </div>
+                    <div id="hepaDis" class="hidden ">
+                        <h1 class="text-2xl font-semibold font-['poppins'] text-sky-900">Hepatology</h1>
+                        <p class="text-gray-600 italic my-6">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                        <p class="text-gray-600">Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+                    </div>
+                    <div id="pedDis" class="hidden ">
+                        <h1 class="text-2xl font-semibold font-['poppins'] text-sky-900">Pediatrics</h1>
+                        <p class="text-gray-600 italic my-6">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                        <p class="text-gray-600">Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+                    </div>
+                    <div id="eyeDis" class="hidden ">
+                        <h1 class="text-2xl font-semibold font-['poppins'] text-sky-900">Eye Care</h1>
+                        <p class="text-gray-600 italic my-6">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                        <p class="text-gray-600">Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+                    </div>
+
+                </div>
+            </div>
+         </section>
+
+         <section id="doctors" class="container mx-auto px-3 pb-12 sm:px-12">
+            <div class="text-center px-3 mb-8">
+                <h1 class="font-semibold text-3xl  text-sky-900  font-['poppins'] my-16 underline-mid underline-thin ">Doctors</h1>
+                <p class="text-gray-600">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+                <div class="flex gap-4 p-6 shadow-lg">
+                    <div class="max-w-32 max-h-32  overflow-hidden rounded-full  "><img src="img/doctors/doctors-1.jpg" alt="WalterWhiteimg" class=" object-cover transition duration-300 ease-in-out transform hover:scale-110" ></div>
+                    <div>
+                        <h1 class="text-2xl font-semibold font-['poppins'] text-sky-900">Walter White</h1>
+                        <h2 class="text-gray-600 font-medium font-['poppins'] mb-2">Chief Medical Officer</h2>
+                        <hr class="bg-sky-200 h-[2px] w-20 mb-4">
+                        <p class="text-gray-600">Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                        <div class="flex  py-2  gap-4 pr-7 ">
+                            <a href="#"><i class="fa-brands fa-twitter  fa-lg text-sky-300  transition duration-500 hover:text-sky-600"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook fa-lg text-sky-300  transition duration-500 hover:text-sky-600"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram fa-lg text-sky-300  transition duration-500 hover:text-sky-600"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin fa-lg text-sky-300  transition duration-500 hover:text-sky-600"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-4 p-6 shadow-2xl">
+                    <div class="max-w-32 max-h-32  overflow-hidden rounded-full  "><img src="img/doctors/doctors-2.jpg" alt="WalterWhiteimg" class=" object-cover transition duration-300 ease-in-out transform hover:scale-110" ></div>
+                    <div>
+                        <h1 class="text-2xl font-semibold font-['poppins'] text-sky-900">Sarah Jhonson</h1>
+                        <h2 class="text-gray-600 font-medium font-['poppins'] mb-2">Anesthesiologist</h2>
+                        <hr class="bg-sky-200 h-[2px] w-20 mb-4">
+                        <p class="text-gray-600">Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                        <div class="flex  py-2  gap-4 pr-7 ">
+                            <a href="#"><i class="fa-brands fa-twitter  fa-lg text-sky-300  transition duration-500 hover:text-sky-600"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook fa-lg text-sky-300  transition duration-500 hover:text-sky-600"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram fa-lg text-sky-300  transition duration-500 hover:text-sky-600"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin fa-lg text-sky-300  transition duration-500 hover:text-sky-600"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-4 p-6 shadow-2xl">
+                    <div class="max-w-32 max-h-32  overflow-hidden rounded-full  "><img src="img/doctors/doctors-3.jpg" alt="WalterWhiteimg" class=" object-cover transition duration-300 ease-in-out transform hover:scale-110" ></div>
+                    <div>
+                        <h1 class="text-2xl font-semibold font-['poppins'] text-sky-900">William Anderson</h1>
+                        <h2 class="text-gray-600 font-medium font-['poppins'] mb-2">Cardiology</h2>
+                        <hr class="bg-sky-200 h-[2px] w-20 mb-4">
+                        <p class="text-gray-600">Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                        <div class="flex  py-2  gap-4 pr-7 ">
+                            <a href="#"><i class="fa-brands fa-twitter  fa-lg text-sky-300  transition duration-500 hover:text-sky-600"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook fa-lg text-sky-300  transition duration-500 hover:text-sky-600"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram fa-lg text-sky-300  transition duration-500 hover:text-sky-600"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin fa-lg text-sky-300  transition duration-500 hover:text-sky-600"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-4 p-6 shadow-2xl">
+                    <div class="max-w-32 max-h-32  overflow-hidden rounded-full  "><img src="img/doctors/doctors-4.jpg" alt="WalterWhiteimg" class=" object-cover transition duration-300 ease-in-out transform hover:scale-110" ></div>
+                    <div>
+                        <h1 class="text-2xl font-semibold font-['poppins'] text-sky-900">Amanda Jepson</h1>
+                        <h2 class="text-gray-600 font-medium font-['poppins'] mb-2">Neurosurgeon</h2>
+                        <hr class="bg-sky-200 h-[2px] w-20 mb-4">
+                        <p class="text-gray-600">Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                        <div class="flex  py-2  gap-4 pr-7 ">
+                            <a href="#"><i class="fa-brands fa-twitter  fa-lg text-sky-300  transition duration-500 hover:text-sky-600"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook fa-lg text-sky-300  transition duration-500 hover:text-sky-600"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram fa-lg text-sky-300  transition duration-500 hover:text-sky-600"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin fa-lg text-sky-300  transition duration-500 hover:text-sky-600"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+         </section>
+
+         <section id="FQ" class="container mx-auto px-3 pb-12 bg-sky-50 space-y-4 sm:px-12 ">
+            <div class="text-center px-3 mb-8">
+                <h1 class="font-semibold text-3xl  text-sky-900  font-['poppins'] my-16 underline-mid underline-thin ">Frequently Asked Questions</h1>
+                <p class="text-gray-600">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+            </div>
+
+            <div class="bg-white p-4 ">
+                <div class="flex gap-2 p-2 group">
+                    <img src="img/question-sign.png" alt="qimg" class="w-5 h-6" >
+                    <h1 class="text-gray-700 text-lg font-['poppins'] font-medium group-hover:text-sky-600">Non consectetur a erat nam at lectus urna duis?</h1>
+                    <i id="uptoggle" class=" transition-all duration-500 fa-solid fa-chevron-down text-gray-600 group-hover:text-sky-600 "></i>
+                </div>
+                <div id="Qpara" class="hidden transition-all duration-500 "><p class="text-gray-600">Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p></div>
+
+                
+            </div>
+            <div class="bg-white p-4 ">
+                <div class="flex gap-2 p-2 group">
+                    <img src="img/question-sign.png" alt="qimg" class="w-5 h-6" >
+                    <h1 class="text-gray-700 text-lg font-['poppins'] font-medium group-hover:text-sky-600">Feugiat scelerisque varius morbi enim nunc?</h1>
+                    <i id="uptoggle" class=" transition-all duration-500 fa-solid fa-chevron-down text-gray-600 group-hover:text-sky-600 "></i>
+                </div>
+                <div id="Qpara" class="hidden transition-all duration-500 "><p class="text-gray-600">Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p></div>
+
+                
+            </div>
+            <div class="bg-white p-4 ">
+                <div class="flex gap-2 p-2 group">
+                    <img src="img/question-sign.png" alt="qimg" class="w-5 h-6" >
+                    <h1 class="text-gray-700 text-lg font-['poppins'] font-medium group-hover:text-sky-600">Tempus quam pellentesque nec nam aliquam sem et tortor consequat?</h1>
+                    <i id="uptoggle" class=" transition-all duration-500 fa-solid fa-chevron-down text-gray-600 group-hover:text-sky-600 "></i>
+                </div>
+                <div id="Qpara" class="hidden transition-all duration-500 "><p class="text-gray-600">Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p></div>
+
+                
+            </div>
+            <div class="bg-white p-4 ">
+                <div class="flex gap-2 p-2 group">
+                    <img src="img/question-sign.png" alt="qimg" class="w-5 h-6" >
+                    <h1 class="text-gray-700 text-lg font-['poppins'] font-medium group-hover:text-sky-600">Dolor sit amet consectetur adipiscing elit?
+                    </h1>
+                    <i id="uptoggle" class=" transition-all duration-500 fa-solid fa-chevron-down text-gray-600 group-hover:text-sky-600 "></i>
+                </div>
+                <div id="Qpara" class="hidden transition-all duration-500 "><p class="text-gray-600">Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p></div>
+
+                
+            </div>
+            <div class="bg-white p-4 ">
+                <div class="flex gap-2 p-2 group">
+                    <img src="img/question-sign.png" alt="qimg" class="w-5 h-6" >
+                    <h1 class="text-gray-700 text-lg font-['poppins'] font-medium group-hover:text-sky-600">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor?</h1>
+                    <i id="uptoggle" class=" transition-all duration-500 fa-solid fa-chevron-down text-gray-600 group-hover:text-sky-600 "></i>
+                </div>
+                <div id="Qpara" class="hidden transition-all duration-500 "><p class="text-gray-600">Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p></div>
+
+                
+            </div>
+
+
+         </section>
+
+<!-- Testimonials -->
+
+         <section id="testimonials" class="container mx-auto px-3 py-20 overflow-hidden sm:px-12">
+            <!-- Slider -->
+            <div id="slider" class="flex  gap-4 overflow-x-scroll snap-x snap-mandatory scrollbar-hide ">
+
+                <div id="testi1" class="flex-shrink-0 w-full  snap-center  flex flex-col p-10 shadow-inner lg:w-1/2">
+                    <img src="img/testimonials/testimonials-1.jpg" alt="timage" class="rounded-xl h-20 w-20 mb-4 ">
+                    <h2 class="text-gray-800 font-semibold  text-lg">Saul GoodMan</h2>
+                    <p class="text-gray-400 mb-6 ">Ceo & Founder</p>
+
+                    <p  class="text-gray-600 indent-8 text-xl  italic relative before:content-['\201C'] before:text-6xl before:text-sky-200 before:absolute  before:-left-6 before:-top-[16px]   after:content-['\201E'] after:text-6xl after:text-sky-200 after:leading-[0px] ">
+                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+     
+                </div>
+                <div id="testi2" class="flex-shrink-0  w-full snap-center flex flex-col p-10 shadow-inner lg:w-1/2">
+                    <img src="img/testimonials/testimonials-2.jpg" alt="timage" class="rounded-xl h-20 w-20 mb-4">
+                    <h2 class="text-gray-800 font-semibold text-lg">Saul GoodMan</h2>
+                    <p class="text-gray-400 mb-6">Ceo & Founder</p>
+
+                    <p  class="text-gray-600 indent-8 text-xl italic relative before:content-['\201C'] before:text-6xl before:text-sky-200 before:absolute  before:-left-6 before:-top-[16px]   after:content-['\201E'] after:text-6xl after:text-sky-200 after:leading-[0px] ">
+                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+     
+                </div>
+                <div id="testi3" class="flex-shrink-0 w-full snap-center flex flex-col p-10 shadow-inner lg:w-1/2 lg:snap-end">
+                    <img src="img/testimonials/testimonials-3.jpg" alt="timage" class="rounded-xl h-20 w-20 mb-4">
+                    <h2 class="text-gray-800 font-semibold text-lg">Saul GoodMan</h2>
+                    <p class="text-gray-400 mb-6">Ceo & Founder</p>
+
+                    <p  class="text-gray-600 indent-8 text-xl italic relative before:content-['\201C'] before:text-6xl before:text-sky-200 before:absolute  before:-left-6 before:-top-[16px]   after:content-['\201E'] after:text-6xl after:text-sky-200 after:leading-[0px] ">
+                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+     
+                </div>
+                <div id="testi4" class="flex-shrink-0 w-full snap-center flex flex-col p-10 shadow-inner lg:w-1/2 lg:snap-start ">
+                    <img src="img/testimonials/testimonials-4.jpg" alt="timage" class="rounded-xl h-20 w-20 mb-4">
+                    <h2 class="text-gray-800 font-semibold text-lg">Saul GoodMan</h2>
+                    <p class="text-gray-400 mb-6">Ceo & Founder</p>
+
+                    <p  class="text-gray-600 indent-8 text-xl italic relative before:content-['\201C'] before:text-6xl before:text-sky-200 before:absolute  before:-left-6 before:-top-[16px]   after:content-['\201E'] after:text-6xl after:text-sky-200 after:leading-[0px] ">
+                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+     
+                </div>
+                <div id="testi5" class="flex-shrink-0 w-full snap-center flex flex-col p-10 shadow-inner lg:w-1/2">
+                    <img src="img/testimonials/testimonials-5.jpg" alt="timage" class="rounded-xl h-20 w-20 mb-4">
+                    <h2 class="text-gray-800 font-semibold text-lg">Saul GoodMan</h2>
+                    <p class="text-gray-400 mb-6">Ceo & Founder</p>
+
+                    <p  class="text-gray-600 indent-8 text-xl italic relative before:content-['\201C'] before:text-6xl before:text-sky-200 before:absolute  before:-left-6 before:-top-[16px]   after:content-['\201E'] after:text-6xl after:text-sky-200 after:leading-[0px] ">
+                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+     
+                </div>
+            </div>
+
+            <div id="sliderbtns" class="flex justify-center scroll-smooth transition-transform duration-1000">
+                <a href="#testi1" class="h-5 w-5 text-sky-600 before:content-['\20DD']   text-xl"></a>
+                <a href="#testi2" class="h-5 w-5 text-sky-600 before:content-['\20DD']   text-xl"></a>
+                <a href="#testi3" class="h-5 w-5 text-sky-600 before:content-['\20DD']   text-xl"></a>
+                <a href="#testi4" class="h-5 w-5 text-sky-600 before:content-['\20DD']   text-xl"></a>
+                <a href="#testi5" class="h-5 w-5 text-sky-600 before:content-['\20DD']   text-xl"></a>
+
+            </div>
+
+         </section>
+
+
+         
+
+
+
+
+        
+           
+
+    </main>
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+  }
+  .scrollbar-hide {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+  }
+}
+
+@layer components {
+    .underline-mid::after {
+      content: '';
+      @apply absolute left-1/4 right-1/4 -bottom-6 h-1 bg-sky-500;
+    }
+  
+    .underline-thin{
+      @apply relative inline-block underline underline-offset-[1.8rem] decoration-gray-200;
+    }
+  }

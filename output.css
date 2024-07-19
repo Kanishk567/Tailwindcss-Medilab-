@@ -722,6 +722,18 @@ video {
   top: 13rem;
 }
 
+.top-6 {
+  top: 1.5rem;
+}
+
+.top-64 {
+  top: 16rem;
+}
+
+.top-72 {
+  top: 18rem;
+}
+
 .top-96 {
   top: 24rem;
 }
@@ -1420,6 +1432,18 @@ video {
   background-image: url('/img/hero.jpg');
 }
 
+.bg-\[url\(\'\.\.\/img\/hero\.jpg\'\)\] {
+  background-image: url('../img/hero.jpg');
+}
+
+.bg-\[url\(\'\2c \/img\/about\.jpg\'\)\] {
+  background-image: url(',/img/about.jpg');
+}
+
+.bg-\[url\(\'\.\.\/img\/about\.jpg\'\)\] {
+  background-image: url('../img/about.jpg');
+}
+
 .bg-cover {
   background-size: cover;
 }
@@ -1513,6 +1537,11 @@ video {
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+.px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .px-24 {
@@ -2110,9 +2139,9 @@ video {
     padding-right: 4rem;
   }
 
-  .sm\:px-24 {
-    padding-left: 6rem;
-    padding-right: 6rem;
+  .sm\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
 
@@ -2148,8 +2177,8 @@ video {
     top: -20rem;
   }
 
-  .lg\:top-32 {
-    top: 8rem;
+  .lg\:top-44 {
+    top: 11rem;
   }
 
   .lg\:order-1 {
@@ -2308,6 +2337,10 @@ video {
     height: 20rem;
   }
 
+  .xl\:h-\[116vh\] {
+    height: 116vh;
+  }
+
   .xl\:h-\[27rem\] {
     height: 27rem;
   }
@@ -2322,17 +2355,8 @@ video {
 }
 
 @media (min-width: 1536px) {
-  .\32xl\:top-96 {
-    top: 24rem;
-  }
-
   .\32xl\:mx-16 {
     margin-left: 4rem;
     margin-right: 4rem;
-  }
-
-  .\32xl\:px-56 {
-    padding-left: 14rem;
-    padding-right: 14rem;
   }
 }

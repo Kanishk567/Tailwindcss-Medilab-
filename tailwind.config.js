@@ -15,7 +15,8 @@ module.exports = {
     extend: {
       boxShadow: {
         'sky': '-10px -10px 5px  rgb(125 211 252)',
-      }
+      },
+     
     },
   },
   plugins: [],
